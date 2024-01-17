@@ -3,6 +3,8 @@ import cors from "cors";
 import pg from "pg";
 import dotenv from "dotenv";
 
+dotenv.config();
+
 const app = express();
 const PORT = 8080;
 app.use(express.json());
