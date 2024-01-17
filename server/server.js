@@ -13,4 +13,16 @@ app.use(cors());
 const dbConnectionString = process.env.DATABASE_URL;
 const db = new pg.Pool({ connectionString: dbConnectionString });
 
-app.listen(PORT, () => { console.log(`App is running on ${PORT}`)});
+// app.get("/", (req, res) => {
+//   res.json("This is my root!!");
+// });
+
+app.get("/", async (req, res) => {
+  const result = await db.query("SELECT * FROM messages");
+  res.json(result.rows);
+  console.log(result.rows);
+});
+
+app.listen(PORT, () => {
+  console.log(`App is running on ${PORT}`);
+});
