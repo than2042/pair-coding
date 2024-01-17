@@ -28,10 +28,13 @@ function App() {
   console.log(messages);
 
   return (
-    <>
-    <div>Hello 
+    
+    <div>{messages.map((message) => {
+      return <div key={message.id}><h2 key={message.id + message.name}>{message.name}</h2>
+        <p key={message.id + message.content}>{message.content}</p></div>
+    })}
     </div>
-    </>
+    
   );
 }
 
