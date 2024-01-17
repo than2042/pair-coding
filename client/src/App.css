@@ -3,5 +3,16 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+  background-color: black;
+  color: white;
 
+}
+h2 {
+  font-weight: 900;
+  
+}
+p {
+  font-weight: 900;
+  color: red;
+  
+}
