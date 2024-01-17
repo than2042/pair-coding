@@ -13,4 +13,4 @@ app.use(cors());
 const dbConnectionString = process.env.DATABASE_URL;
 const db = new pg.Pool({ connectionString: dbConnectionString });
 
-app.listen(PORT, `App is running on ${PORT}`);
+app.listen(PORT, () => { console.log(`App is running on ${PORT}`)});
